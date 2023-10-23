@@ -13,7 +13,7 @@ function App() {
   async function sendRequest(){
     //send email
     try {
-      const response = await axios.post('http://localhost:3434/sendemail', { name: name, phone: phone }, {withCredentials: true});
+      const response = await axios.post(import.meta.env.VITE_SERVER_ADDRESS+'/sendemail', { name: name, phone: phone }, {withCredentials: true});
       if(response.status === 200){
         selectPopUp(true);
       }
@@ -33,11 +33,12 @@ function App() {
               <p>Request a call back</p>
               <div>Our team will connect shortly in 12 - 24 hrs</div>
               <div>Can't you wait for call?</div>
-              <button onClick={()=>{selectPopUp(false); setOpenPopup(false)}} className={styles.btnRed}>Check another video <img src={arrow} alt="arrow"/></button>
+              <button onClick={()=>{setOpenPopup(false); selectPopUp(false)}} className={styles.btnRed}>Check another video <img src={arrow} alt="arrow"/></button>
           </div>
         </div>
         : 
         <div className={styles.popUp}>
+            <h2 className={styles.close} onClick={()=>{setOpenPopup(false); selectPopUp(false)}} >&times;</h2>
           <div className={styles.callbackForm}>
               <p>Request a call back</p>
               <input type="text" placeholder="Enter Name" value={name} onChange={e => setName(e.target.value)} />

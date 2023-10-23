@@ -5,6 +5,7 @@
 .popUp{
     box-sizing: border-box;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     position: fixed;
@@ -76,4 +77,10 @@
 }
 .callbackForm > button:active {
     opacity: 0.6;
+}
+.close{
+    color: white;
+    width: 480px;
+    text-align: right;
+    font-weight: 500;
 }

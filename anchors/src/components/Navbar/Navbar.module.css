@@ -27,6 +27,7 @@
     border-radius: 4px;
 }
 .callbackbtn {
+    cursor: pointer;
     display: flex;
     align-items: center;
     gap: 20px;

@@ -3,7 +3,7 @@ import axios from "axios";
 import youtubelogo from "../../assets/youtubeicon.svg";
 import playicon from "../../assets/solar_play-bold.svg";
 import loadingGif from "../../assets/loading.svg";
-import toprated from '../../assets/toprated.svg';
+import topvideoicon from '../../assets/topvideo.png';
 import eyeicon from '../../assets/eye.svg';
 import likeicon from '../../assets/like.svg';
 import commenticon from '../../assets/comment.svg';
@@ -190,7 +190,7 @@ export default function Form() {
           <div className={styles.mainVideo}>
             <div className={styles.mainVideoDetails}>
               <div className={styles.thumbnailSide}>
-                <div className={styles.topRatedText}><img src={toprated} atl='toprated logo'/>Top earner video</div>
+                <div className={styles.topRatedText}><img src={topvideoicon} atl='toprated logo'/> Top earner video</div>
                 <img src={topVideo.thumbnailURL} alt="thumbnail" />
                 <div className={styles.dateText}>Uploaded on - {getSimpleDate(topVideo.publishedAt)}</div>
               </div>
