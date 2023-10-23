@@ -20,6 +20,9 @@ server.use(cors({
     optionsSuccessStatus: 204,
 }))
 server.use(express.json());
+server.get('/connectionstatus', async (req, res) => {
+    res.status(200).send('Active');
+});
 
 server.post('/sendemail', async (req, res) => {
     if(!req.body.name || !req.body.phone) return res.status(404).send('Please enter valid data');

@@ -11,7 +11,6 @@ function App() {
   const [ openPopup, setOpenPopup ] = useState(false);
   const [ popUp, selectPopUp ] = useState(false);
   async function sendRequest(){
-    //send email
     try {
       const response = await axios.post(import.meta.env.VITE_SERVER_ADDRESS+'/sendemail', { name: name, phone: phone }, {withCredentials: true});
       if(response.status === 200){
