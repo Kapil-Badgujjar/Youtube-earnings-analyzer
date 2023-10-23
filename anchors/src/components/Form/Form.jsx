@@ -99,7 +99,7 @@ export default function Form() {
         }
 
         if (innerResponse.status === 200) {
-          const videoDataArray = await Promise.all(
+          let videoDataArray = await Promise.all(
             innerResponse.data.items.map(async (item) => {
               const data = await fetchDataByVideoID(item.id.videoId);
               return data;
@@ -119,6 +119,10 @@ export default function Form() {
               response.data.items[0].statistics.commentCount * 10,
           };
           setTopVideo(mainVideo);
+          videoDataArray = videoDataArray.sort((a,b) => {
+            if(a.earnings > b.earnings) return -1;
+            else return 1;
+          })
           setVideosDataArray([...videoDataArray]);
           setStatus(STATUS_VALUE.COMPLETED);
         }
