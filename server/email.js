@@ -4,10 +4,10 @@ sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 
 export default function sendEmail(name, phone){
     const msg = {
-      to: 'kapilbadgujjar99@gmail.com',
+      to: process.env.TO,
       from: {
-        name: 'Kapil',
-        email: 'kapilbatra0786@gmail.com'
+        name: process.env.NAME,
+        email: process.env.FROM_EMAIL
     },
       subject: `Request for call back from ${name}`,
       text: `Recieved a callback request from, \nName: ${name}, \nphone number: ${phone}`,
