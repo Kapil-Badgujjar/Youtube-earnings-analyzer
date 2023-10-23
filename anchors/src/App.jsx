@@ -16,6 +16,8 @@ function App() {
       const response = await axios.post(import.meta.env.VITE_SERVER_ADDRESS+'/sendemail', { name: name, phone: phone }, {withCredentials: true});
       if(response.status === 200){
         selectPopUp(true);
+        setName('');
+        setPhone('');
       }
     }catch (error){
       console.log(error);
@@ -28,6 +30,7 @@ function App() {
       <Form />
       {openPopup && (popUp ?
         <div className={styles.popUp}>
+          <h2 className={styles.close} onClick={()=>{setOpenPopup(false); selectPopUp(false)}} >&times;</h2>
           <div className={styles.callbackForm}>
               <img src={done} alt="done image" />
               <p>Request a call back</p>
@@ -38,7 +41,7 @@ function App() {
         </div>
         : 
         <div className={styles.popUp}>
-            <h2 className={styles.close} onClick={()=>{setOpenPopup(false); selectPopUp(false)}} >&times;</h2>
+          <h2 className={styles.close} onClick={()=>{setOpenPopup(false); selectPopUp(false)}} >&times;</h2>
           <div className={styles.callbackForm}>
               <p>Request a call back</p>
               <input type="text" placeholder="Enter Name" value={name} onChange={e => setName(e.target.value)} />
