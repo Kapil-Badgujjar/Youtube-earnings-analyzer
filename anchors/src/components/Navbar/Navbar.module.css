@@ -1,0 +1,40 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    background-color: black;
+    font-size: 28px;
+    font-family: 'sora';
+    font-weight: 600;
+    padding: 16px 144px;
+}
+.header > div {
+    display: flex;
+    gap: 14px;
+}
+.header > div > div {
+    display: flex;
+    flex-direction: column;
+}
+.header > div > div > span {
+    color: black;
+    font-family: 'inter';
+    font-size: 10px;
+    font-style: normal;
+    font-weight: 400;
+    padding: 2px 6px;
+    background-color: #CCC;
+    border-radius: 4px;
+}
+.callbackbtn {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    font-family: 'inter';
+    font-size: 20px;
+    font-weight: 400;
+    width: fit-content;
+    padding: 10px 24px;
+    border: 1px solid white;
+    border-radius: 22px;
+}

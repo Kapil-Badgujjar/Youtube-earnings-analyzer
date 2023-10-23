@@ -1,0 +1,79 @@
+.app {
+    background-color: black;
+    height: 100vh;
+}
+.popUp{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    font-family: 'inter';
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(255,255,255,0.2);
+    z-index: 100;
+}
+.callbackForm {
+    color: white;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 480px;
+    height: 396px;
+    background-color: #282828;
+    border-radius: 10px;
+    padding: 60px;
+}
+.callbackForm > p {
+    font-size: 24px;
+    font-weight: 500;
+}
+.callbackForm > input {
+    color: white;
+    width: 100%;
+    outline: none;
+    border: 1px solid #707070;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    padding: 15px 20px;
+    background-color: transparent;
+    border-radius: 10px;
+}
+.callbackForm > div {
+    color: rgba(255,255,255,0.8);
+    text-align: center;
+    padding: 0px 60px;
+}
+.callbackForm > button {
+    cursor: pointer;
+    outline: none;
+    border: none;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    border-radius: 22px;
+    padding: 12px 40px;
+}
+.btnRed {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    color: white;
+    background-color: red;
+}
+.btnWhite {
+    color: black;
+    background-color: white;
+}
+.callbackForm > button:hover {
+    opacity: 0.8;
+}
+.callbackForm > button:active {
+    opacity: 0.6;
+}
